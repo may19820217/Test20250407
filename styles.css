@@ -1,0 +1,160 @@
+/* ========== 全域樣式 ========== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* ========== 導航列 ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0351aa;
+    color: white;
+    padding: 15px 20px;
+}
+
+/* 公司名稱區塊 */
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.text-container h4 {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* 漢堡選單按鈕 */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* 預設隱藏（桌面版） */
+}
+
+/* 選單樣式 */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ========== 響應式設計（手機版） ========== */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* 手機版顯示漢堡選單 */
+    }
+
+    .nav-links {
+        display: none; /* 預設隱藏 */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #0351aa;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.show {
+        display: flex; /* 當「show」類別被加上時，才顯示 */
+    }
+}
+
+/* ========== 主要版面配置 ========== */
+.container {
+    display: flex;
+}
+
+/* ========== 左側選單 ========== */
+.sidebar {
+    width: 250px;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sidebar span {
+    font-size: 14px;
+    color: rgb(36, 60, 156);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    background: #272be5;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/* 滑鼠滑過時，背景變紅 */
+.sidebar li:hover {
+    background: #3547eb;
+    color: rgb(250, 248, 248);
+}
+
+/* 如果是 active 狀態，背景變紅，文字變白 */
+.sidebar li.active {
+    background: #3547eb;
+    color: white;
+}
+
+/* active 狀態時，滑鼠滑過改回綠色 */
+.sidebar li.active:hover {
+    background: #3547eb;
+    color: rgb(247, 245, 245); /* 可根據需要調整文字顏色 */
+}
+
+/* ========== 內容區 ========== */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 24px;
+    border-bottom: 2px solid #f4f0f0;
+    padding-bottom: 5px;
+}
+
+.content h1 span {
+    font-size: 18px;
+    color: rgb(128, 128, 128);
+}
+
+.content p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ========== 地圖 ========== */
+iframe {
+    margin-top: 10px;
+   
+}
